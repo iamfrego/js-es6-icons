@@ -1,0 +1,38 @@
+* {
+    font-family: 'Courgette', cursive;
+}
+
+h1 {
+    color: #29B1DD;
+}
+
+h5 {
+    margin-bottom: 0;
+}
+
+.filter {
+    background-color: #29B1DD;
+    margin-bottom: 48px;
+}
+
+.container-fluid {
+    background-color: #DDDDDD;
+    height: calc(100vh - 120px);
+}
+
+.card {
+    padding-top: 1rem;
+    border-radius: 15px;
+}
+
+.animal {
+    color: #0000FF;
+}
+
+.vegetable {
+    color: #FFA500;
+}
+
+.user {
+    color: #800080;
+}
