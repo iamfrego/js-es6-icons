@@ -98,14 +98,13 @@ const icons = [
     ];
 
 
-
 icons.forEach(icon => {
 
     const card =
         `
         <div class="col">
             <div class="card text-center">
-                <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
+                <i class="${icon.family} ${icon.prefix}${icon.name} fa-2x ${icon.type}"></i>
                 <div class="icon_name">
                     <p>${icon.name}</p>
                 </div>
@@ -113,4 +112,7 @@ icons.forEach(icon => {
         </div>`
     document.querySelector('.row-cols-5').insertAdjacentHTML('beforeend', card)
 });
+
+
+
 
