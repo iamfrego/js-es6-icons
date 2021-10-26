@@ -1,5 +1,5 @@
-body {
-    background-color: DDDDDD;
+* {
+    font-family: 'Courgette', cursive;
 }
 
 h1 {
@@ -12,4 +12,13 @@ h5 {
 
 .filter {
     background-color: #29B1DD;
+    margin-bottom: 48px;
+}
+
+.container-fluid {
+    background-color: #DDDDDD;
+}
+
+.card {
+    border-radius: 15px;
 }
