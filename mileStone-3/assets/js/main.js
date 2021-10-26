@@ -97,41 +97,39 @@ const icons = [
     }
 ];
 
+const containerRow = document.querySelector('.row')
+const iconType = document.querySelector('.type');
 
-function printIcon() {
+icons.forEach(icon => {
 
-    const select = document.querySelector(".selection");
+    containerRow.innerHTML += createCard(icon);
+})
 
-    const cleaner = document.querySelector(".row");
 
-    cleaner.innerHTML = " ";
-
+function createFiltredCard() {
+    containerRow.innerHTML = '';
 
     icons.forEach(icon => {
 
-        if (icons.value == "all" ||
-            select.value == icons.type) {
+        if (iconType.value == icon.type || iconType.value == 'all') {
 
-            const card =
-                `
-        <div class="col">
-            <div class="card text-center">
-                <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
-                <div class="icon_name">
-                    <p>${icon.name.toUpperCase()}</p>
-                </div>
-            </div>
-        </div>`
-            document.querySelector('.row-cols-5').insertAdjacentHTML('beforeend', card)
+            containerRow.innerHTML += createCard(icon);
         }
-    });
-
+    })
 }
 
 
-printIcon();
+
+function createCard(icon) {
+    return `
+  <div class="col">
+  <div class=" card bg-light text-center">
+  <i class="${icon.family} ${icon.prefix}${icon.name} fa-2x ${icon.type}"></i>
+  <p><strong>${icon.name}</strong></p>
+  </div>
+  </div>
+  `
+}
 
 
-const selected = document.querySelector(".selection");
-
-selected.addEventListener("change", printIcon);
+iconType.addEventListener('change', createFiltredCard)
