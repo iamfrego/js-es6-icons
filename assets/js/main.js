@@ -1,5 +1,4 @@
-const icons =
-    [
+const icons = [
         {
             name: 'cat',
             prefix: 'fa-',
@@ -106,11 +105,26 @@ icons.forEach(icon => {
         `
         <div class="col">
             <div class="card text-center">
-                <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
+                <i class="${icon.family} ${icon.prefix}${icon.name} "></i>
                 <div class="icon_name">
                     <p>${icon.name}</p>
                 </div>
             </div>
         </div>`
     document.querySelector('.row-cols-5').insertAdjacentHTML('beforeend', card)
+});
+
+icons.forEach(icon => {
+
+    let x;
+    for (x in icon) {
+        if (icon.type == 'animal') {
+            console.log(x);
+        } else if (icon.type == 'vegetable') {
+            console.log(x);
+        } else if (icon.type == 'user') {
+            console.log(x);
+        }
+    }
+
 });
